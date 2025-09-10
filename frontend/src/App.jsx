@@ -46,7 +46,7 @@ const App = () => {
     files.forEach((file)=>formData.append("images",file));
     // here images is a keyword for files
     try{
-        const response = await axios.post("http://localhost:3000/upload/files", formData,{
+        const response = await axios.post("https://file-upload-64m3.onrender.com/upload/files", formData,{
           headers:{"content-type":"multipart/form-data"},
           onUploadProgress:(progressEvent)=>{
             const percentCompleted = Math.round((progressEvent.loaded*100)/progressEvent.total);
